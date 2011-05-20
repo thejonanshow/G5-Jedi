@@ -1,12 +1,7 @@
 <%= form_for (@quiz) do |f| %>
   Title: <%= f.text_field :title %>
   Description: <%= f.text_field :description %>
-
-  <% f.fields_for (@question) do |q| %>
-    <%= q.label :text %>
-    <%= q.text_field :text %>
-    <%= q.select(:quiz_id, options_for_select(@quizzes.collect {|quiz| [quiz.title, quiz.id]}, params[:quiz_id])) %>
-  <% end %>
+  <%= f.select(:topic_id, options_for_select(@topics.collect {|t| [t.name, t.id]}, params[:topic_id])) %>
 
   <%= f.submit %>
 <% end %>

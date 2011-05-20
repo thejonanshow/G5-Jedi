@@ -11,6 +11,7 @@ class QuizzesController < ApplicationController
     @quiz = Quiz.new
     @quizzes = Quiz.all
     @question = Question.new
+    @topics = Topic.all
   end
 
   def create
