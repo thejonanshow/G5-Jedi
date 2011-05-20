@@ -1,0 +1,6 @@
+<h1>Ranks</h1>
+<%= link_to 'New', :action => 'new' %><br/>
+<% @ranks.each do |rank| %>
+  <%= rank.name %>: 
+  <%= rank.description %><br/>
+<% end %>
