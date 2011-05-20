@@ -21,7 +21,9 @@ a:hover { color:#F0DA1E; }
 html { background:url(/images/bg-repeat-html.png) #000; }
 body { background:url(/images/bg-bottom-body.png) bottom center no-repeat; color:#fff; font-family:helvetica, arial, sans-serif; }
 
-ul li { padding-left:10px; font-size:12px; }
+div.quiz { margin:15px 0; }
+ul.question_choices {margin-bottom:15px;}
+ul.question_choices li { margin-left:20px; line-height:18px; font-size:12px; list-style-type:georgian; }
 .clear { clear:both; }
 
 #whopper { background:url(/images/bg-top-whopper.png) top center no-repeat; width:1000px; margin:auto; padding:30px 0; }

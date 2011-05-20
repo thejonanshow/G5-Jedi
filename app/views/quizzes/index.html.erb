@@ -1,5 +1,5 @@
 <h1>Quizzes</h1>
 <%= link_to 'New', :action => 'new' %><br/>
 <% @quizzes.each do |q| %>
-  <%= link_to "#{q.title}: #{q.description}", q %> <%= link_to 'Edit', edit_quiz_path(q) %><br/>
+  <div class="quiz"><%= link_to "#{q.title}: #{q.description}", q %> <%= link_to 'Edit', edit_quiz_path(q) %></div>
 <% end %>

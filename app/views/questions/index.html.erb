@@ -1,7 +1,9 @@
 <% @questions.each do |question| %>
-  <%= question.text %> <%= "(#{question.difficulty.name})" if question.difficulty %>
-  <%= link_to 'Edit Question', edit_question_path(question) %>
-  <ul>
+  <h3 class="question">
+    <%= question.text %> <%= "(#{question.difficulty.name})" if question.difficulty %>
+    <%= link_to 'Edit Question', edit_question_path(question) %>
+  </h3>
+  <ul class="question_choices">
     <% question.question_choices.each do |choice| %>
       <li><%= choice.text %> <%= '(Correct)' if choice.correct %></li>
     <% end %>
