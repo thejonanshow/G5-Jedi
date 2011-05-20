@@ -23,6 +23,12 @@ class QuizzesController < ApplicationController
     end
   end
 
+  def edit
+    @quiz = Quiz.find(params[:id])
+    @topics = Topic.all
+    params[:topic_id] = @quiz.topic.id unless @quiz.topic.nil?
+  end
+
   def update
   end
 

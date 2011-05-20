@@ -13,13 +13,13 @@
 ActiveRecord::Schema.define(:version => 20110520171023) do
 
   create_table "difficulties", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "links", :force => true do |t|
-    t.integer  "rank_id"
+    t.integer  "topic_id"
     t.integer  "difficulty_id"
     t.string   "url"
     t.string   "name"
