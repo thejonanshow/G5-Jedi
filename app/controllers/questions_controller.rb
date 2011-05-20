@@ -29,7 +29,7 @@ class QuestionsController < InheritedResources::Base
     @question = Question.find(params[:id])
     @quizzes = Quiz.all
     @difficulties = Difficulty.all
-    params[:difficulty_id] = @question.difficulty.id
+    params[:difficulty_id] = @question.difficulty.id unless @question.difficulty.nil?
     params[:quiz_id] = @question.quiz.id
   end
 

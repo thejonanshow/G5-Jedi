@@ -29,45 +29,45 @@ ActiveRecord::Schema.define(:version => 20110520171023) do
   end
 
   create_table "question_choices", :force => true do |t|
-    t.integer  "question_id"
-    t.text     "text"
-    t.boolean  "correct"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer   "question_id"
+    t.text      "text"
+    t.boolean   "correct"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "questions", :force => true do |t|
-    t.text     "text"
-    t.integer  "quiz_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "difficulty_id"
+    t.text      "text"
+    t.integer   "quiz_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "difficulty_id"
   end
 
   create_table "quizzes", :force => true do |t|
-    t.text     "title"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "topic_id"
-    t.integer  "difficulty_id"
+    t.text      "title"
+    t.text      "description"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "topic_id"
+    t.integer   "difficulty_id"
   end
 
   create_table "ranks", :force => true do |t|
-    t.string   "name"
-    t.string   "description"
-    t.integer  "order"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.string    "description"
+    t.integer   "order"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "topics", :force => true do |t|
-    t.string   "name"
-    t.string   "description"
-    t.integer  "rank_id"
-    t.integer  "order"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.string    "description"
+    t.integer   "rank_id"
+    t.integer   "order"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
 end
