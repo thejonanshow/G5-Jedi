@@ -1,4 +1,8 @@
 G5jedi::Application.routes.draw do
+  resources :links
+
+  resources :difficulties
+
   root :to => 'topics#index'
 
   resources :topics

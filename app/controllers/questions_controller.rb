@@ -12,6 +12,7 @@ class QuestionsController < InheritedResources::Base
   def new
     @question = Question.new
     @quizzes = Quiz.all
+    @difficulties = Difficulty.all
     4.times {@question.question_choices.build}
   end
 
@@ -24,7 +25,19 @@ class QuestionsController < InheritedResources::Base
     end
   end
 
+  def edit
+    @question = Question.find(params[:id])
+    @quizzes = Quiz.all
+    @difficulties = Difficulty.all
+    params[:difficulty_id] = @question.difficulty.id
+    params[:quiz_id] = @question.quiz.id
+  end
+
   def update
+    @question = Question.find(params[:id])
+    @question.attributes = params[:question]
+    @question.save
+    redirect_to :action => 'index'
   end
 
   def destroy

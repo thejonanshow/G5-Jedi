@@ -3,6 +3,8 @@
   <%= f.text_field :text %><br/>
   <%= f.label :quiz_id, "Quiz:" %>
   <%= f.select(:quiz_id, options_for_select(@quizzes.collect {|q| [q.title, q.id]}, params[:quiz_id])) %><br/>
+  <%= f.label :difficulty_id, "Difficulty:" %>
+  <%= f.select(:difficulty_id, options_for_select(@difficulties.collect {|d| [d.name, d.id]}, params[:difficulty_id])) %><br/>
 
   <% f.fields_for :question_choices do |qc| %>
     <%= qc.label :text, "Answer: " %>

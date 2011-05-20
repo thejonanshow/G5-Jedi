@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  rank_id: 1
+  difficulty_id: 1
+  url: MyString
+  name: MyString
+  description: MyString
+
+two:
+  rank_id: 1
+  difficulty_id: 1
+  url: MyString
+  name: MyString
+  description: MyString

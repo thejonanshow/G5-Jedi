@@ -10,7 +10,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110520101254) do
+ActiveRecord::Schema.define(:version => 20110520171023) do
+
+  create_table "difficulties", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "links", :force => true do |t|
+    t.integer  "rank_id"
+    t.integer  "difficulty_id"
+    t.string   "url"
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "question_choices", :force => true do |t|
     t.integer  "question_id"
@@ -25,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20110520101254) do
     t.integer  "quiz_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "difficulty_id"
   end
 
   create_table "quizzes", :force => true do |t|
@@ -33,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20110520101254) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "topic_id"
+    t.integer  "difficulty_id"
   end
 
   create_table "ranks", :force => true do |t|
