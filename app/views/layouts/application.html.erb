@@ -7,8 +7,19 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
+  <div id="whopper">
+    <div id="header" class="saberborder">
+      <a href="" class="logo">G5 Jedi</a>
+      <form class="login-form">
+        Login
+        <input name="username" /><br />
+        Password
+        <input name="password" />
+      </form>
+    </div>
+    <div id="middle" class="saberborder">
+      <%= yield %>
+    </div>
 
 </body>
 </html>
