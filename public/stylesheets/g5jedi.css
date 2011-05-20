@@ -16,7 +16,7 @@ abbr,acronym {border:0;}
 /* /reset */
 
 h1,h2,h3,h4,h5,h6 { color:#F0DA1E; margin:10px 0; }
-a { color:#0022ff;}
+a { color:#5373d9;}
 a:hover { color:#F0DA1E; }
 html { background:url(/images/bg-repeat-html.png) #000; }
 body { background:url(/images/bg-bottom-body.png) bottom center no-repeat; color:#fff; font-family:helvetica, arial, sans-serif; }
