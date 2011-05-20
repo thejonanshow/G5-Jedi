@@ -16,9 +16,18 @@
         Password
         <input name="password" />
       </form>
+      <div id="nav">
+        <%= link_to 'All Topics', :topics %> | 
+        <%= link_to 'New Topic', :new_topic %> | 
+        <%= link_to 'All Quizzes', :quizzes %> | 
+        <%= link_to 'New Quiz', :new_quiz %> | 
+        <%= link_to 'All Questions', :questions %> | 
+        <%= link_to 'New Question', :new_question %>
+      </div>
     </div>
     <div id="middle" class="saberborder">
       <%= yield %>
+      <div class="clear"></div>
     </div>
 
 </body>

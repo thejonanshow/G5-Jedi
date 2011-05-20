@@ -1,6 +1,10 @@
 <h1>Topics</h1>
 <%= link_to 'New', :action => 'new' %><br/>
-<% @topics.each do |topic| %>
-  <%= topic.name %>: 
-  <%= topic.description %><br/>
+<% @ranks.each do |rank| %>
+  <h2><%= rank.name %></h2>
+  <h5><%= rank.description %></h5>
+  <% rank.topics.sort_by{|t| t.order}.each do |topic| %>
+    <%= topic.name %>: 
+    <%= topic.description %><br/>
+  <% end %>
 <% end %>

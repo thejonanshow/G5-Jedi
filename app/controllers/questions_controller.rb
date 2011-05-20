@@ -5,7 +5,7 @@ class QuestionsController < InheritedResources::Base
     if params[:quiz_id]
       @questions = Quiz.find(params[:quiz_id]).questions
     else
-      @questions = Questions.all
+      @questions = Question.all
     end
   end
 
