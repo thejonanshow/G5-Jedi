@@ -1,5 +1,6 @@
 <h1>Topics</h1>
+<%= link_to 'New', :action => 'new' %><br/>
 <% @topics.each do |topic| %>
-  <%= topic.name %>
-  <%= topic.description %>
+  <%= topic.name %>: 
+  <%= topic.description %><br/>
 <% end %>

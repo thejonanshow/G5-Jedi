@@ -3,6 +3,7 @@ class CreateQuestionChoices < ActiveRecord::Migration
     create_table :question_choices do |t|
       t.integer :question_id
       t.text :text
+      t.boolean :correct
 
       t.timestamps
     end

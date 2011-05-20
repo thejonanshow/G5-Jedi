@@ -1,0 +1,14 @@
+<% form_for (@question) do |f| %>
+  <%= f.label :text, 'Question' %>
+  <%= f.text_field :text %><br/>
+  <%= f.label :quiz_id, "Quiz:" %>
+  <%= f.select(:quiz_id, options_for_select(@quizzes.collect {|q| [q.title, q.id]}, params[:quiz_id])) %><br/>
+
+  <% f.fields_for :question_choices do |qc| %>
+    <%= qc.label :text, "Answer: " %>
+    <%= qc.text_field :text %>
+    <%= qc.check_box :correct %><br/>
+  <% end %>
+
+  <%= f.submit %>
+<% end %>

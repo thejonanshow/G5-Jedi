@@ -1,5 +1,6 @@
 <%= form_for (@topic) do |f| %>
-  <%= f.text_field :name %>
-  <%= f.text_field :description %>
+  Name: <%= f.text_field :name %>
+  Description: <%= f.text_field :description %><br/>
+  <%= f.select(:rank_id, options_for_select(@ranks.collect {|r| [r.name, r.id]}, Rank.first)) %>
   <%= f.submit %>
 <% end %>

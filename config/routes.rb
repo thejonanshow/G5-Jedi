@@ -5,8 +5,10 @@ G5jedi::Application.routes.draw do
 
   resources :ranks
 
+  resources :questions
+
   resources :quizzes do
-    resources :quiestions do
+    resources :questions do
       resources :question_choices
     end
   end

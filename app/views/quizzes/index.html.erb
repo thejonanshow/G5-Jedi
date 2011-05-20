@@ -1,0 +1,6 @@
+<h1>Quizzes</h1>
+<%= link_to 'New', :action => 'new' %><br/>
+<% @quizzes.each do |q| %>
+  <%= q.title %>: 
+  <%= q.description %><br/>
+<% end %>

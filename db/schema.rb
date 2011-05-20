@@ -15,12 +15,14 @@ ActiveRecord::Schema.define(:version => 20110519215259) do
   create_table "question_choices", :force => true do |t|
     t.integer  "question_id"
     t.text     "text"
+    t.boolean  "correct"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "questions", :force => true do |t|
     t.text     "text"
+    t.integer  "quiz_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
